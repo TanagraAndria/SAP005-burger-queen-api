@@ -6,7 +6,7 @@ const port = 3000
 app.use('/', routes);
 
 app.get('*', (req, res) => {
-  res.send('Hello World!')
+  res.send('Chef Api')
 })
 
 app.listen(port, () => {
