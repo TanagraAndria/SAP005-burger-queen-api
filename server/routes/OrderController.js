@@ -1,5 +1,5 @@
-import {Router} from 'express'
-import AllOrderController from '../controller/AllOrderController'
+const { Router } =  require ("express")
+const AllOrderController = require ( '../controller/AllOrderController')
 
 const router = Router()
 router.get('/', AllOrderController.add)
@@ -11,4 +11,4 @@ router.delete('/:id', AllOrderController.all)
 router.post('/', AllOrderControlleradd)
 router.post('/id/items', AllOrderController.createItem)
 
-export default router
+module.exports= router
