@@ -1,8 +1,23 @@
-// aqui vai o código que acessa o banco de dados
+const database= require("../db/models")
 
-const getAllOrder = (req, res) => {
-    console.log("você também pode utilizar o console para visualizar =)")
-    res.send("Request feita")
+const getOrders = (req, res) => {
+    res.send("Pedidos")
   }
+
+const getOrderID = (req, res) => {
+    res.send("Pedidos por ID")
+  }  
+
+const PostOrder = (req, res) => {
+    res.send("Postando Pedidos")
+  }
+
+const PutOrder = (req, res) => {
+    res.send("Atualizando Pedido por ID")
+  }   
   
-  module.exports = { getAllOrder }
+const DelOrderID = (req, res) => {
+    res.send(" Deletando Pedido por ID")
+  }  
+  
+  module.exports = { getOrders, getOrderID, PostOrder, PutOrder, DelOrderID}
