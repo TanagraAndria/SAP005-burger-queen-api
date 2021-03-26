@@ -1,11 +1,14 @@
-const { Router } = require('express')
-const userRouter = require("./userRouter")
-const router = Router()
 
-// aqui vai todas as rotas
-router.use('/users', userRouter);
-router.use('/UserController', userRouter);
-// router.use('/ProductController', productRouter);
-// router.use('/OrderController ', OrderRouter);
+const { Router } = require('express')
+
+const usersRoute = require('./usersRouter')
+const ordersRoute = require('./OrdersRouter')
+const productsRoute = require('./productsRouter')
+
+const router = Router()
+router.use('/users', usersRoute);
+router.use('/order', ordersRoute);
+router.use('/product', productsRoute);
 
 module.exports = router
+

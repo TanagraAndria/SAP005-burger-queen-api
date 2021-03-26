@@ -1,16 +1,32 @@
 const database= require("../db/models")
 
+const UserController= (req, res) => {
+  const result= await database.Users.findAll()
+    res.send(result)
+    return res.status(200).json(users);
+}
+  
 const all = async (req, res) => {
     const result= await database.Users.findAll()
     console.log("todos")
     res.send(result)
+    return res.status(200).json(users);
   }
 
-  const ID = async (req, res) => {
+  const UserID = async (req, res) => {
+    const {id}= await database.Users.findAll({
+      where: {
+        id: Number (id)
+      }
+    })
+    return res.status(200).json(users)
+  }
+
+  const DeletID = async (req, res) => {
     const {id}= req.params.id
     const result= await database.Users.delet( {id})
-    console.log("1")
     res.send(result)
+    return res.status(200).json(users)
   }
 
   const  create = async (req, res) => {
@@ -18,22 +34,14 @@ const all = async (req, res) => {
     const result= await database.Users.create( {firstName, lastName, email})
     console.log("criar")
     res.send(result)
+    return res.status(200).json(users)
   }
 
-  const  destroy= async (req, res) => {
-    const {id}= req.params.id
-    const result= await database.Users.destroy( {id})
-    console.log("apagar")
+  const  update= async (req, res) => {
+    const {id}= req.body.id  
+    const result= await database.Users.update({firstName, lastName, email})
     res.send(result)
+    return res.status(200).json(users)
   }
 
-  const  putUser= async (req, res) => {
-    const {id}= req.body  
-    const result= await database.Users.putUser( {id})
-    console.log("atualizar")
-    res.send(result)
-  }
-  
-
-  
-  module.exports = {all, create, destroy, putUser, ID}
+ module.exports = {UserController, all, create, update, DeletID, UserID}
