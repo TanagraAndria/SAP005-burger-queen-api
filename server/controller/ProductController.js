@@ -1,23 +1,23 @@
 const database= require("../db/models")
 
 const getProducts = (req, res) => {
-  const result= database.Product.findAll()
+  const result= database.Products.findAll()
     res.send(result)
-    return res.status(200).json(Product);
+    return res.status(200).json(products);
   }
 
 const getProductID = (req, res) => {
-   const {id}=  database.Product.findAll({
+   const {id}=  database.Products.findAll({
       where: {
         id: Number (id)
       }
     })
-    return res.status(200).json(Product);
+    return res.status(200).json(products);
   }  
 
 const PostProducts = (req, res) => {
   const { name, description, price } = req.body;
-  database.Product.create({
+  database.Products.create({
     name, description, price
     
   })
@@ -32,13 +32,13 @@ const PostProducts = (req, res) => {
 
 const PutroductID = (req, res) => {
   const {name, description, price}= req.body.id  
-    const result= database.Product.update({name, description, price})
+    const result= database.Products.update({name, description, price})
     res.send(result)
-    return res.status(200).json(Product)
+    return res.status(200).json(products)
   }   
   
 const DelProductID = (req, res) => {
-  const destroyProduct =  database.Product.destroy({
+  const destroyProduct =  database.Products.destroy({
     where: {
       id: req.params.id
     }

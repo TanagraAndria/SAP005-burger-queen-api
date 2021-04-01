@@ -1,18 +1,18 @@
 const database= require("../db/models")
 
 const getOrders = (req, res) => {
-  const result= database.Order.findAll()
+  const result= database.Orders.findAll()
   res.send(result)
-  return res.status(200).json(Order);
+  return res.status(200).json(Orders);
   }
 
 const getOrderID = (req, res) => {
-  const {id}=  database.Order.findAll({
+  const {id}=  database.Orders.findAll({
     where: {
       id: Number (id)
     }
   })
-  return res.status(200).json(Order);
+  return res.status(200).json(Orders);
   }  
 
 const PostOrder = (req, res) => {
@@ -32,9 +32,9 @@ const PostOrder = (req, res) => {
 
 const PutOrder = (req, res) => {
   const {client, table}= req.body.id  
-  const result= database.Order.update({client, table})
+  const result= database.Orders.update({client, table})
   res.send(result)
-  return res.status(200).json(Order)
+  return res.status(200).json(Orders)
   }   
   
 const DelOrderID = (req, res) => {
