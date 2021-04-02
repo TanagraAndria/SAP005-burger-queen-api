@@ -1,5 +1,5 @@
 # Burger Queen - Back-end
-
+![alt text](img/b.jpeg)
 ## Índice
 
 * [1. Prefácio](#1-prefácio)
@@ -57,6 +57,9 @@ A API contém os seguintes endpoints:
 ### <b> Acesse aqui: [API](https://ogros-api.herokuapp.com/)
 
 ## 4. Ferramentas Utilizadas: 
+Node.js
+Postgress
+Heroku
 
 
 
