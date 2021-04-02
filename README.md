@@ -10,11 +10,11 @@
 
 ## 1. Prefácio
 
-Um pequeno restaurante de hamburgueres, que está crescendo, necessita de um
+O restaurante Ogro's Burger, está crescendo, e necessita de um
 sistema para realizar pedidos usando um _tablet_, e que os enviem à
 cozinha para que sejam preparados de forma ordenada e eficiente.
 
-A interface front-end da aplicação Burger Queen já foi criado, e agora precisamos
+A interface front-end da aplicação Ogro's Burger já foi criado, e agora precisamos
 criar o back-end para manejar os dados. Neste caso, isso será feito através
 de uma _API rest_ que será compatível com as requisições vindas do front.
 
