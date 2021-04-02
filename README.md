@@ -1,5 +1,5 @@
 # Burger Queen - Back-end
-!.[alt text].()
+
 ## Índice
 
 * [1. Prefácio](#1-prefácio)
