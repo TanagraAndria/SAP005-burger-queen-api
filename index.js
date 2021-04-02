@@ -9,6 +9,9 @@ if(process.env.NODE_ENV !== 'production') {
 app.use(express.json()); 
 app.use(routes);
 
+app.get('*', (req, res) => {
+  res.send('Chef Api')
+})
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
