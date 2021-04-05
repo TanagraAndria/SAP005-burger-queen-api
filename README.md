@@ -1,5 +1,7 @@
 # Burger Queen - Back-end
 ![alt text](img/b.jpeg)
+
+Status do projeto: em desenvolvimento 
 ## Índice
 
 * [1. Prefácio](#1-prefácio)
